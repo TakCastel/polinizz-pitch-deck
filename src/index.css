@@ -1,0 +1,312 @@
+@font-face {
+  font-family: 'Zain';
+  src: url('/fonts/zain-400.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Zain';
+  src: url('/fonts/zain-700.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Zain ExtraBold';
+  src: url('/fonts/zain-800.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/nunito-400.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/nunito-700.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --cream: #FFF6E8;
+  --text: #2D2F3E;
+  --muted: #6B6E82;
+  --yellow: #FFD23F;
+  --orange: #FF9933;
+  --lavender: #B49DE0;
+  --purple: #7C3AED;
+  --card: #F3E6CE;
+  --tint-yellow: #FFF0C2;
+  --tint-purple: #EDE3F9;
+  --neutral-x: #C7BFAE;
+  --white: #FFFFFF;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #EDEDF0;
+  font-family: 'Nunito', sans-serif;
+  color: var(--text);
+}
+
+/* --- Vue aperçu (slides empilées) --- */
+
+.preview {
+  min-height: 100vh;
+  padding: 78px 0 80px;
+}
+
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 13px 16px;
+  background: rgba(237, 237, 240, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.btn {
+  background: var(--purple);
+  color: #fff;
+  border: none;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 11px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(124, 58, 237, 0.35);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.btn:hover:not(:disabled) { transform: translateY(-1px); }
+.btn:disabled { opacity: 0.7; cursor: progress; }
+
+.btn-toggle { background: #fff; color: var(--text); box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10); }
+.btn-toggle.on { background: var(--yellow); color: #141414; box-shadow: 0 2px 10px rgba(245, 166, 35, 0.45); }
+
+.deck-scroll {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 0 20px;
+}
+.deck-scroll.with-notes { max-width: 1520px; }
+
+.row { display: flex; gap: 18px; }
+
+.scaled-slide {
+  flex: 1;
+  min-width: 0;
+  aspect-ratio: 13.3 / 7.5;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* --- Bulle de notes de pitch --- */
+
+.note-bubble {
+  position: relative;
+  flex: 0 0 320px;
+  align-self: center;
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px 20px 18px;
+  box-shadow: 0 4px 18px rgba(20, 20, 20, 0.10);
+}
+.note-bubble::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #fff;
+}
+.note-head {
+  font-family: 'Zain';
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: var(--purple);
+  margin-bottom: 6px;
+}
+.note-bubble p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #33343a;
+}
+
+/* --- Export PPTX : capture hors écran, sans arrondis ni ombre --- */
+
+.export-host .slide { border-radius: 0; box-shadow: none; }
+
+/* --- Scène de présentation --- */
+
+.theater {
+  position: fixed;
+  inset: 0;
+  background: #141418;
+}
+
+.stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+  animation: slide-in 0.25s ease;
+}
+
+@keyframes slide-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.nav-zone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 25%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.nav-prev { left: 0; }
+.nav-next { right: 0; }
+
+.hud {
+  position: absolute;
+  right: 16px;
+  bottom: 12px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+  font-variant-numeric: tabular-nums;
+  user-select: none;
+}
+
+/* --- Slide (design 1280 × 722, ratio 13.3:7.5) --- */
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--cream);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 28px rgba(20, 20, 20, 0.10);
+}
+
+.el { position: absolute; }
+
+.logo-inline svg { width: 100%; height: 100%; display: block; }
+
+.zain { font-family: 'Zain'; font-weight: 700; }
+.zain-xb { font-family: 'Zain ExtraBold'; font-weight: 400; }
+.nunito { font-family: 'Nunito'; }
+
+.sidebar-word {
+  position: absolute;
+  left: calc(4.2% - 0.6em); /* centré sur l'axe vertical du logo abeille */
+  bottom: 16%;              /* juste au-dessus du logo (bottom 9% + sa hauteur) */
+  writing-mode: vertical-rl;
+  transform: rotate(180deg); /* se lit de bas en haut */
+  font-family: 'Zain';
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #EBDCBE;
+  white-space: nowrap;
+}
+
+.logo {
+  position: absolute;
+  left: 2.6%;
+  bottom: 9%;
+  width: 3.2%;
+  aspect-ratio: 1;
+  color: var(--text);
+}
+.logo svg { width: 100%; height: 100%; display: block; }
+
+.page-num {
+  position: absolute;
+  right: 2%;
+  bottom: 5%;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.card {
+  position: absolute;
+  background: var(--card);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.badge {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.badge svg { width: 52%; height: 52%; stroke: #fff; }
+.badge svg.icon-solid { fill: #fff; }
+.badge svg:not(.icon-solid) path { fill: none; }
+
+.kicker {
+  font-family: 'Nunito';
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.subtitle {
+  font-family: 'Zain ExtraBold';
+  color: var(--text);
+  line-height: 1.05;
+}
+.accent { color: var(--orange); }
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  font-family: 'Nunito';
+  font-weight: 700;
+  color: var(--text);
+}
+
+.block {
+  position: absolute;
+  border-radius: 14px;
+}
+.block-num {
+  font-family: 'Zain ExtraBold';
+  color: var(--text);
+  line-height: 1;
+}
+.block-label {
+  font-family: 'Nunito';
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+.block-source {
+  font-family: 'Nunito';
+  color: rgba(45, 47, 62, 0.55);
+}
