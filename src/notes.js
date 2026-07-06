@@ -25,7 +25,7 @@ const notes = [
   "Pour la suite, on va pousser la méthode Avignon : devenir LA référence des sorties dans une ville avant d'élargir ailleurs. Concrètement, ça veut dire une curation locale où on vérifie chaque événement, une présence Instagram avec l'agenda de la semaine, des vidéos courtes sur quoi faire le week-end, et la construction d'un noyau de rucheurs fidèles. Une fois ce modèle prouvé, on réplique ville par ville, on lance l'application mobile, on signe des partenariats avec les offices de tourisme et les mairies, et on ouvre le Premium IA aux organisateurs.",
 
   // 9 — L'équipe
-  "Et pour porter tout ça, on est deux aujourd'hui. Moi, Tarik, je m'occupe du produit et de la technique. Katerine Wagner Joye s'occupe du contenu et de la communauté. On est complémentaires, et c'est exactement pour ça que je vous en parle aujourd'hui : je cherche des gens qui ont envie de construire ça avec nous.",
+  "Et pour porter tout ça, on est deux aujourd'hui. Moi, Tarik, je m'occupe du produit et de la technique. Katerine s'occupe du contenu et de la communauté. On est complémentaires, et c'est exactement pour ça que je vous en parle aujourd'hui : je cherche des gens qui ont envie de construire ça avec nous.",
 
   // 10 — Merci
   "Voilà, c'est Polinizz. Si cette histoire vous parle, venez en discuter avec moi, vraiment, j'ai hâte d'échanger. Vous pouvez m'écrire à tariktalhaoui84@gmail.com, ou aller voir directement sur polinizz.fr.",

@@ -1,7 +1,7 @@
 export default function S09Equipe() {
   const team = [
     { left: 7.142857142857142, bg: 'var(--lavender)', name: 'Tarik', role: 'Fondateur & Développement', desc: 'Le produit, la technique.' },
-    { left: 51.87969924812031, bg: 'var(--yellow)', name: 'Katerine Wagner Joye', role: 'Cofondatrice & Marketing', desc: 'Le contenu, la communauté.' },
+    { left: 51.87969924812031, bg: 'var(--yellow)', name: 'Katerine', role: 'Cofondatrice & Marketing', desc: 'Le contenu, la communauté.' },
   ]
 
   return (
