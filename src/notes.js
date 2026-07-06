@@ -1,34 +1,34 @@
 // Texte à prononcer pour chaque slide (notes de pitch, inclus dans l'export PowerPoint).
 const notes = [
   // 1 — Titre
-  "Bonjour à tous ! Polinizz, c'est la plateforme qui butine tous les événements près de chez vous et les rassemble sur une seule carte. En trois minutes, je vous montre pourquoi ça change tout pour les sorties locales.",
+  "Merci d'être là. Je m'appelle Tarik, et avec Polinizz, on butine tous les événements près de chez vous pour les rassembler sur une seule carte. Je vais vous montrer en quelques minutes pourquoi ce sujet me tient à cœur, et pourquoi je pense qu'on tient quelque chose de solide.",
 
   // 2 — Le problème
-  "Aujourd'hui, l'info locale est éparpillée partout : mairies, réseaux sociaux, billetteries… personne n'a la vue d'ensemble. Les grandes métropoles sont bien couvertes, mais dans les petites villes, il ne se passe soi-disant jamais rien. Et sur les réseaux, c'est un algorithme qui décide si un événement vous atteint — ou pas. Facebook, Instagram : ce sont des plateformes américaines, pas connectées à l'actualité locale française, ou qui s'en désintéressent complètement.",
+  "Tout est parti d'un constat simple : aujourd'hui, l'info locale est éparpillée partout, entre les mairies, les réseaux sociaux et les billetteries, et personne n'a la vue d'ensemble. Dans les petites villes, on a l'impression qu'il ne se passe jamais rien, alors que c'est faux : l'info existe, il n'y a juste personne pour la centraliser. Et sur les réseaux, ce sont des plateformes américaines qui décident, avec leur algorithme, ce que vous voyez ou pas, sans se soucier de ce qui se passe vraiment près de chez vous.",
 
   // 3 — La solution
-  "Notre réponse : une carte unique, en temps réel. Tous les événements agrégés, à jour, au même endroit. On cherche par ville, on filtre par date et par catégorie, chaque fiche renvoie vers l'organisateur, et un classement met en avant les « rucheurs » les plus actifs. L'application mobile arrive.",
+  "Alors on a construit une réponse simple : une carte unique, mise à jour en temps réel. On cherche par ville, on filtre par date et par catégorie, chaque événement renvoie vers son organisateur, et un classement met en avant les « rucheurs » les plus actifs, ceux qui contribuent le plus à la communauté. L'application mobile arrive bientôt.",
 
   // 4 — Traction
-  "Six mois après le lancement : 600+ villes couvertes, plus de 25 000 événements référencés, et 150 utilisateurs actifs. Le tout en croissance organique, sans un euro de budget marketing.",
+  "Et ça marche déjà : six mois après le lancement, on couvre plus de 600 villes, on a référencé plus de 25 000 événements, et 150 utilisateurs actifs nous suivent au quotidien. Le tout sans avoir dépensé un centime en marketing, uniquement grâce au bouche à oreille.",
 
   // 5 — Le marché
-  "Plutôt qu'une TAM abstraite à plusieurs milliards, on préfère montrer le marché tel qu'il est vraiment : rien qu'à Avignon, notre ville pilote, on recense près de 986 événements culturels et associatifs chaque année, sur la seule base des données ouvertes OpenAgenda. On a déjà identifié 113 lieux — salles de spectacles, salons, espaces de conférence — et 613 associations culturelles actives : ce sont nos futurs organisateurs, à convaincre un par un.",
+  "Pour vous donner une idée concrète du marché, plutôt que de sortir une statistique nationale abstraite à plusieurs milliards, j'ai préféré aller vérifier sur le terrain, à Avignon, notre ville pilote. Résultat : près de 986 événements culturels et associatifs recensés chaque année, rien que sur les données ouvertes disponibles. J'ai aussi identifié 113 lieux, des salles de spectacles, des salons, des espaces de conférence, et 613 associations culturelles actives. Ce sont elles, nos futurs organisateurs, qu'on va convaincre une par une.",
 
   // 6 — Positionnement
-  "Sur ce créneau, nous sommes les seuls à combiner carte, temps réel et petites villes. Mais au-delà du positionnement produit, on a des fonctionnalités payantes qu'aucun concurrent n'offre aujourd'hui : statistiques d'audience pour les organisateurs, recherche IA illimitée, cross-publication multi-agendas. La billetterie intégrée arrivera en 2027.",
+  "Sur ce terrain, on est aujourd'hui les seuls à combiner une carte, le temps réel et la couverture des petites villes. Mais ce qui compte vraiment, c'est qu'on a déjà des fonctionnalités qu'aucun concurrent ne propose : des statistiques d'audience pour les organisateurs, une recherche IA illimitée, et la cross-publication sur plusieurs agendas en même temps. La billetterie intégrée arrivera en 2027.",
 
   // 7 — Business model
-  "Le modèle est simple : gratuit pour le public, freemium pour les organisateurs. 19,99 euros par mois pour l'offre Normal, 249,99 euros pour l'offre Pro avec accompagnement dédié. Avec une croissance organique réaliste, churn inclus, on part de 10 clients et un compte Pro le premier mois, pour arriver à 82 clients et 3 comptes Pro au sixième mois — soit près de 2 400 euros de revenu mensuel récurrent. Et parce que Polinizz butine, 1 % de notre chiffre d'affaires sera reversé chaque année aux apiculteurs.",
+  "Le modèle économique, je l'ai voulu simple : gratuit pour le public, freemium pour les organisateurs. 19,99 euros par mois pour l'offre Normal, 249,99 euros pour l'offre Pro avec un accompagnement dédié. Si on prend une croissance organique réaliste, churn inclus, on part de 10 clients et un compte Pro le premier mois, et on arrive à 82 clients et 3 comptes Pro dès le sixième mois, ce qui représente déjà près de 2 400 euros de revenu récurrent mensuel. Et parce que Polinizz butine, 1 % du chiffre d'affaires sera reversé chaque année aux apiculteurs.",
 
   // 8 — Déploiement & prochaines étapes
-  "Notre stratégie, c'est la méthode Avignon : devenir LA référence des sorties dans une ville avant d'élargir. Curation locale — on vérifie chaque événement —, l'agenda de la semaine sur Instagram, des vidéos courtes « quoi faire ce week-end », et un noyau de rucheurs. Ensuite : l'application mobile iOS et Android, la réplication ville par ville, des partenariats avec les offices de tourisme et les mairies, et le lancement du Premium IA pour les organisateurs.",
+  "Pour la suite, on va pousser la méthode Avignon : devenir LA référence des sorties dans une ville avant d'élargir ailleurs. Concrètement, ça veut dire une curation locale où on vérifie chaque événement, une présence Instagram avec l'agenda de la semaine, des vidéos courtes sur quoi faire le week-end, et la construction d'un noyau de rucheurs fidèles. Une fois ce modèle prouvé, on réplique ville par ville, on lance l'application mobile, on signe des partenariats avec les offices de tourisme et les mairies, et on ouvre le Premium IA aux organisateurs.",
 
   // 9 — L'équipe
-  "Derrière Polinizz, deux fondateurs complémentaires : moi, Tarik, sur le produit et la technique, et Katerine Wagner Joye sur le contenu et la communauté.",
+  "Et pour porter tout ça, on est deux aujourd'hui. Moi, Tarik, je m'occupe du produit et de la technique. Katerine Wagner Joye s'occupe du contenu et de la communauté. On est complémentaires, et c'est exactement pour ça que je vous en parle aujourd'hui : je cherche des gens qui ont envie de construire ça avec nous.",
 
   // 10 — Merci
-  "Merci ! Butinons ensemble, venez en parler avec nous : tariktalhaoui84@gmail.com, ou directement sur polinizz.fr.",
+  "Voilà, c'est Polinizz. Si cette histoire vous parle, venez en discuter avec moi, vraiment, j'ai hâte d'échanger. Vous pouvez m'écrire à tariktalhaoui84@gmail.com, ou aller voir directement sur polinizz.fr.",
 ]
 
 export default notes
