@@ -1,8 +1,8 @@
 export default function S07BusinessModel() {
   const pills = [
     { label: 'Découverte', value: 'Gratuit', bg: 'var(--card)' },
-    { label: 'Normal', value: '19,99 €/mois', bg: 'var(--yellow)' },
-    { label: 'Pro', value: '249,99 €/mois', bg: 'var(--lavender)' },
+    { label: 'Pro', value: '19,99 €/mois', bg: 'var(--yellow)' },
+    { label: 'Pro+', value: '249,99 €/mois', bg: 'var(--lavender)' },
   ]
 
   const rows = [
@@ -30,8 +30,8 @@ export default function S07BusinessModel() {
           <thead>
             <tr>
               <th style={{ background: "var(--text)", color: "#fff", fontSize: "15px", padding: "10px 16px", textAlign: "left" }}>Progression</th>
-              <th style={{ background: "var(--text)", color: "#fff", fontSize: "15px", padding: "10px 16px", textAlign: "center" }}>Clients Normaux</th>
-              <th style={{ background: "var(--text)", color: "#fff", fontSize: "15px", padding: "10px 16px", textAlign: "center" }}>Comptes Pro</th>
+              <th style={{ background: "var(--text)", color: "#fff", fontSize: "15px", padding: "10px 16px", textAlign: "center" }}>Clients Pro</th>
+              <th style={{ background: "var(--text)", color: "#fff", fontSize: "15px", padding: "10px 16px", textAlign: "center" }}>Clients Pro+</th>
               <th style={{ background: "var(--orange)", color: "var(--text)", fontSize: "15px", padding: "10px 16px", textAlign: "center" }}>Revenu mensuel</th>
             </tr>
           </thead>
